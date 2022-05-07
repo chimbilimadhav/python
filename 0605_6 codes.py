@@ -53,3 +53,17 @@ for x in mydict3:
        else:
               mydict4[x] = 1
 print(mydict4)
+
+# 7. Create a Dictionary containing name id as keys 
+# you need to ask user for input to assign values to name and id
+# but you need to store all the names and id's 
+
+id = {}
+
+for i in range(10):
+    student_name = input("Enter student's name: ")
+    student_id = input("Enter student's id: ")
+
+    id[student_name.title()] = student_id
+
+print(id)
