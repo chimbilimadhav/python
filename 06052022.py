@@ -56,15 +56,15 @@ print(mydict4)
 
 # 7
 
-a = {}
+# a = {}
 
-n = int(input("number of elements: "))
-for i in range(n):
-       k = input('Enter key: ')
-       v = input('Enter value: ')
-       a[k] = v
+# n = int(input("number of elements: "))
+# for i in range(n):
+#        k = input('Enter key: ')
+#        v = input('Enter value: ')
+#        a[k] = v
 
-print('Details of Cadidates: \n', a)
+# print('Details of Cadidates: \n', a)
 
 # create a dictionary contianing name id as keys 
 # you need to ask user for the input to assign values to name and id
