@@ -159,3 +159,42 @@ print(isinstance(marks1, Student))
 print("\nCheck whether the said classes are subclasses of the built in object class or not")
 print(issubclass(Student, object))
 print(issubclass(Marks, object))
+
+# Write a Python class named Student with two attributes student_name, marks. 
+# Modify the attribute values of the said class and print the original and
+# modified values of the said attributes.
+
+class Student:
+    student_name = 'Madhav Chimbili'
+    marks = 89
+print(f"Student Name: {getattr(Student,'student_name')}")
+print(f"Marks: {getattr(Student, 'marks')}")
+setattr(Student, 'student_name', 'Angel Brooks')
+setattr(Student, 'marks',95)
+print(f"Student Name: {getattr(Student, 'student_name')}")
+print(f"Marks:{getattr(Student, 'marks')}")
+
+# Write a Python class named Student with two attributes student_id, 
+# student_name. Add a new attribute student_class and display 
+# the entire attribute and their values of the said class. 
+# Now remove the student_name attribute and display the 
+# entire attribute with values
+
+class Student:
+    student_id = 'V10'
+    student_name = 'madhav chimbili'
+print("Original attributes and their values of the student class:")
+for attr, value in Student.__dict__.items():
+    if not attr.startswith('_'):
+        print(f'{attr} -> {value}')
+print("\nAfter adding the student_class, attributes and their values with the said class:")
+Student.student_class = 'V'
+for attr, value in Student.__dict__.items():
+    if not attr.startswith('_'):
+        print(f'{attr} -> {value}')
+print("\nAfter removing the student_name attributes and their values from the said class:")
+del Student.student_name
+for attr, value in Student.__dict__.items():
+    if not attr.startswith('_'):
+        print(f'{attr} -> {value}')
+        
